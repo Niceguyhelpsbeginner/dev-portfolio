@@ -1,6 +1,8 @@
 import React from 'react'
+import { useI18n } from '../i18n'
 
 const Projects = () => {
+  const { t } = useI18n()
   const projects = [
     {
       title: "해류데이터 기반 해양쓰레기 집적지 예측 시스템",
@@ -59,7 +61,7 @@ const Projects = () => {
     <section id="projects" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
-          프로젝트
+          {t('projectsTitle')}
         </h2>
         <div className="space-y-8">
           {projects.map((project, index) => (
@@ -68,32 +70,32 @@ const Projects = () => {
               className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all"
             >
               <div className="flex items-start gap-4 mb-4">
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <span className="text-5xl">{project.icon}</span>
-                  <div className="flex-1">
-                          <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                              {project.title}
-                          </h3>
-                    <p className="text-gray-600 mb-4 text-lg">
-                      {project.description}
-                    </p>
-                    <ul className="list-disc list-inside space-y-2 mb-4 text-gray-700">
-                      {project.details.map((detail, idx) => (
-                        <li key={idx}>{detail}</li>
-                      ))}
-                    </ul>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, idx) => (
-                        <span
+                <div className="flex-1">
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                        <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                            {project.title}
+                        </h3>
+                    </a>
+                  <p className="text-gray-600 mb-4 text-lg">
+                    {project.description}
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 mb-4 text-gray-700">
+                    {project.details.map((detail, idx) => (
+                      <li key={idx}>{detail}</li>
+                    ))}
+                  </ul>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, idx) => (
+                      <span
                         key={idx}
                         className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-medium"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
-                </a>
+                </div>
               </div>
             </div>
           ))}

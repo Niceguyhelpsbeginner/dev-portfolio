@@ -1,6 +1,8 @@
 import React from 'react'
+import { useI18n } from '../i18n'
 
 const Awards = () => {
+  const { t } = useI18n()
   const awards = [
     {
       title: "2024 교내 캡스톤 동상",
@@ -38,7 +40,7 @@ const Awards = () => {
     <section id="awards" className="py-20 px-4 bg-gradient-to-br from-indigo-50 to-purple-50">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
-          수상실적
+          {t('awardsTitle')}
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
           {awards.map((award, index) => (
