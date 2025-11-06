@@ -19,7 +19,19 @@ const Awards = () => {
       description: "환경·사회·지배구조를 고려한 프로젝트 기여",
       icon: "🌱",
       link:"#"
-    }
+    }, 
+    {
+      title: "B-growth 창업대회 대상 ",
+      description: "AI 기반 헬스케어 시스템 서비스 기획",
+      icon: "🏆",
+      link:"#"
+    },    
+    {
+      title: "네이버 클라우드 부트캠프 2등상 ",
+      description: "네이버 클라우드에서 서브넷 할당 및 클라우드 서비스 구축",
+      icon: "🏆",
+      link:"#"
+    },
   ]
 
   return (

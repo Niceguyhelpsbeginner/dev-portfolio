@@ -5,12 +5,14 @@ import Awards from './components/Awards'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Footer from './components/Footer'
+import Experience from './components/Experience'
 
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Hero />
       <About />
+      <Experience />
       <Awards />
       <Projects />
       <Skills />
