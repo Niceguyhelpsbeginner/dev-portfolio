@@ -68,32 +68,32 @@ const Projects = () => {
               className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all"
             >
               <div className="flex items-start gap-4 mb-4">
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <span className="text-5xl">{project.icon}</span>
-                <div className="flex-1">
-                    <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                            {project.title}
-                        </h3>
-                    </a>
-                  <p className="text-gray-600 mb-4 text-lg">
-                    {project.description}
-                  </p>
-                  <ul className="list-disc list-inside space-y-2 mb-4 text-gray-700">
-                    {project.details.map((detail, idx) => (
-                      <li key={idx}>{detail}</li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, idx) => (
-                      <span
+                  <div className="flex-1">
+                          <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                              {project.title}
+                          </h3>
+                    <p className="text-gray-600 mb-4 text-lg">
+                      {project.description}
+                    </p>
+                    <ul className="list-disc list-inside space-y-2 mb-4 text-gray-700">
+                      {project.details.map((detail, idx) => (
+                        <li key={idx}>{detail}</li>
+                      ))}
+                    </ul>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, idx) => (
+                        <span
                         key={idx}
                         className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           ))}
