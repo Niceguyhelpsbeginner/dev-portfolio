@@ -1,7 +1,6 @@
 # 개발자 포트폴리오
 
 개인 개발자 포트폴리오 웹사이트입니다.
-https://niceguyhelpsbeginner.github.io/dev-portfolio/
 ## 기술 스택
 
 - React 18
